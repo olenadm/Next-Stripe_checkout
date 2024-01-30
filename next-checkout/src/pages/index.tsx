@@ -88,13 +88,17 @@ export default function Home() {
       products: quantities,
     });*/
 
-   
-
     const stripe = new Stripe(constants.stripe_key);
+
+    // Call your backend to create the Checkout Session
+const response = await fetch('/create-checkout-session', { method: 'POST' });
+const session = await response.json();
+
+
 
     stripe.redirectToCheckout({
       //sessionId: data.id,
-      //sessionId: "id9",
+      sessionId: session.id,
     });
   };
 

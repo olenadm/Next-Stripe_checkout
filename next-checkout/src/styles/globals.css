@@ -5,17 +5,11 @@
   --primary: #a100ffff;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-
 
 body {
   color: rgb(var(--foreground-rgb));
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
     0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   background-image: radial-gradient(
@@ -34,6 +28,17 @@ body {
     radial-gradient(74% 86% at 67% 38%, #6dffaef5 24%, #073aff00 100%),
     linear-gradient(125deg, #4eb5ffff 1%, #4c00fcff 100%);
 }
+html, #__next{
+  height:100%;
+}
+
+main {
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 a,
 .text-primary {
@@ -45,10 +50,10 @@ a,
 }
 .card {
   border-radius: var(--border-radius);
-  border:0;
+  border: 0;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .form-control {
   background-color: rgba(206, 250, 255, 0.861);
-  border:0;
+  border: 0;
 }
